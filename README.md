@@ -14,7 +14,7 @@ Throughout the index.js and generateMarkdown.js, I included comments to each sec
 
 ## The look
 
-![alt text](assets/Photos/README%20APP.mp4)
+![alt text](assets/videos/README%20APP.gif)
 
 ## Installation
 
