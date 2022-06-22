@@ -39,7 +39,7 @@ const questions = [ // Question for the Title
     validate: validateInput,
 },
 
-// Table of Contents, andling this in the markdown.js
+// Table of Contents, anding this in the markdown.js
 
 // Question for Installation
 {
