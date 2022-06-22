@@ -7,18 +7,36 @@ const inquirer = require("inquirer");
 // need a markdown js file here
 const generateMarkdown = require("./utils/generateMarkdown");
 
+const renderLicenseBadge = require("./utils/generateMarkdown");
+
+const renderLicenseLink = require("./utils/generateMarkdown");
+
+const renderLicenseSection = require("./utils/generateMarkdown");
+
+
+function validateInput(value) {
+    if (value != "") {
+        return true;
+    } else {
+        return "Please answer the question with some kind on input.";
+    }
+}
+
 // TODO: Create an array of questions for user input
 const questions = [ // Question for the Title
 {
     type: "input",
     name: "title",
     message: "What is the title of your project?",
+    validate: validateInput,
+
 },
 // Question for the project Description
 {
     type: "input",
     name: "description",
     message: "Please enter a description of your project.",
+    validate: validateInput,
 },
 
 // Table of Contents, andling this in the markdown.js
@@ -28,6 +46,7 @@ const questions = [ // Question for the Title
     type: "input",
     name: "installation",
     message: "Please enter an explanation how to install the software, or commands for the program.",
+    validate: validateInput,
 },
 
 // Question for Usage
@@ -35,6 +54,7 @@ const questions = [ // Question for the Title
     type: "input",
     name: "usage",
     message: "Please describe how we can use this program/project.",
+    validate: validateInput,
 },
 
 // Question for License 
@@ -58,6 +78,7 @@ const questions = [ // Question for the Title
     type: "input",
     name: "contributing",
     message: "How can users contribute to your project.",
+    validate: validateInput,
 },
 
 // Question for Tests
@@ -65,6 +86,7 @@ const questions = [ // Question for the Title
     type: "input",
     name: "tests",
     message: "Please enter any testing instructions you would like to provide for this project.",
+    validate: validateInput,
 },
 
 // QUESTIONS section -- github 
@@ -72,6 +94,7 @@ const questions = [ // Question for the Title
     type: "input",
     name: "userName",
     message: "What is your GitHub username?",
+    validate: validateInput,
 },
 
 // QUESTIONS section -- email address

@@ -65,11 +65,11 @@ return;
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-  ${data.license}
+function generateMarkdown(value) {
+  return `# ${value.title}
+  ${value.license}
   # Description
-  ${data.description}
+  ${value.description}
   # Table of Contents 
   * [Installation](#-Installation)
   * [Usage](#-Usage)
@@ -79,19 +79,19 @@ function generateMarkdown(data) {
   * [Questions](#-Contact-Information)
       
   # Installation
-  ${data.installation}
+  ${value.installation}
   # Usage
-  ${data.usage}
+  ${value.usage}
   # License 
-  ${data.license}
+  ${value.license}
   * As this license list was not comprehensive, if you need another license, use the contact information below to ask for license to be added. 
   # Contributing 
-  ${data.contributing}
+  ${value.contributing}
   # Tests
-  ${data.tests}
+  ${value.tests}
   # Contact Information 
-  * GitHub Username: ${data.userName}
-  * Contact Email: ${data.userEmail}
+  * GitHub Username: ${value.userName}
+  * Contact Email: ${value.userEmail}
 
 `;
 }
